@@ -1,15 +1,5 @@
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "multimedia";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  } 
+  include 'db_con.php';
   
   //escape special characters in a string
   $advisor = mysqli_real_escape_string($conn, $_POST['advisor_name']);

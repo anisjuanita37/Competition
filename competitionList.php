@@ -7,17 +7,7 @@
   <h3 align="center">Creative Multimedia Competition 2020</h3>
 
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "multimedia";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  } 
+  include 'db_con.php';
 
   //create and execute query
   $sql = "SELECT * FROM competition";

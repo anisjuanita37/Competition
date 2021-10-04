@@ -49,8 +49,7 @@
   <?php
    include 'db_con.php';
         //create query
-      $sql = "INSERT INTO competition (advisorName, advisorContact, advisorEmail, campus, memberA, 
-memberB, memberC) VALUES ('$adName', '$adContact', '$adEmail', '$campus', '$member1', '$member2', '$member3')";
+      $sql = "INSERT INTO competition (advisorName, advisorContact, advisorEmail, campus, memberA, memberB, memberC) VALUES ('$adName', '$adContact', '$adEmail', '$campus', '$member1', '$member2', '$member3')";
 
       //execute query
       if ($conn->query($sql) === TRUE) {

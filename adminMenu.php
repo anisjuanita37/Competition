@@ -33,16 +33,17 @@ endif;
 
   </form>
 
+  <form action="registration.html" method="post">
+
+     <p><input type="submit" value="Register" name="cmdRegister"></p>
+
+  </form>
+
   <form action="logout.php" method="post">
 
      <p><input type="submit" value="Log Out" name="cmdlogout"></p>
 
   </form>
 
-  <form action="regProcess.php" method="post">
-
-     <p><input type="submit" value="TEST" name="cmdlogout"></p>
-
-  </form>
 </body>
 </html>
