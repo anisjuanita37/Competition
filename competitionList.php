@@ -4,6 +4,16 @@
 </head>
 <body>
 
+
+<script>
+      // The function below will start the confirmation dialog
+      function deleteProfile(i) {
+
+    if (confirm("Do you really want to delete your profile?")) {
+        location.href = '/deleteRecord.php?id=+i';
+    }
+</script>
+
   <h3 align="center">Creative Multimedia Competition 2020</h3>
 
 <?php
@@ -38,6 +48,10 @@
         echo '<td align="center">'.$row["memberA"].'</td>';
         echo '<td align="center">'.$row["memberB"].'</td>';
         echo '<td align="center">'.$row["memberC"].'</td>';
+        ?>
+        <td><a href="deleteRecord.php?id=<?php echo $row["id"];?>" onclick="return confirm('Are sure to delete data?')">REMOVE</a></td>
+       <?php
+        echo '<td><a href="editRecord.php?id='.$row["id"].'">UPDATE</a></td>';
         echo '</tr>';
      }
   } 

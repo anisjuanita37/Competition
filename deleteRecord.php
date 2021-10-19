@@ -5,23 +5,16 @@
 <body>
 
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "multimedia";
+    include 'db_con.php';
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  } 
-
-  //get input value
-  $adName=$_POST['advisor_name'];
+    $id=$_REQUEST['id'];
+  
+    //get input value
+  // $adName=$_POST['advisor_name'];
 
   // sql to delete a record
-  $sql = "DELETE FROM competition WHERE advisorName='$adName'";
+  $sql = "DELETE FROM competition  WHERE id='".$id."'";
+ 
 
   if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";

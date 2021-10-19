@@ -1,17 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "multimedia";
-   
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error); }
+include 'db_con.php';
 
 $id=$_REQUEST['id'];
+
 $query = "SELECT * from competition where id='".$id."'"; 
 $result = mysqli_query($conn, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);

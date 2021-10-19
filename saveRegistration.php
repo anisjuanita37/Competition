@@ -65,9 +65,11 @@
 
   <br>
 
-  <form>
+  <form action="adminMenu.php">
      <input type="button" name="printButton" onClick="window.print()" value="Print">
+     <input type="submit" value="Back to Main" name="cmdBackMain">
   </form>
+
 
 </body>
 </html>
